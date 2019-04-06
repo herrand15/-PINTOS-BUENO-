@@ -1,0 +1,93 @@
+\hypertarget{shell_8c}{}\section{shell.\+c File Reference}
+\label{shell_8c}\index{shell.\+c@{shell.\+c}}
+
+
+Implementacion de un shell para Pintos.  
+
+
+{\ttfamily \#include \char`\"{}lib/stdio.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}kernel/console.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/stdlib.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}devices/input.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/string.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$stdbool.\+h$>$}\\*
+{\ttfamily \#include $<$stddef.\+h$>$}\\*
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}filesys/file.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}filesys/filesys.\+h\char`\"{}}\\*
+Include dependency graph for shell.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shell_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries I\+N\+P\+U\+T\+\_\+\+S\+I\+ZE}~50\hypertarget{shell_8c_abcf72cd23bdafb47b19023d91b4c107d}{}\label{shell_8c_abcf72cd23bdafb47b19023d91b4c107d}
+
+\item 
+\#define {\bfseries C\+A\+R\+R\+I\+A\+G\+E\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+C\+H\+AR}~13\hypertarget{shell_8c_abdf9f7e5da7e68dcf6243ea1878e90cb}{}\label{shell_8c_abdf9f7e5da7e68dcf6243ea1878e90cb}
+
+\item 
+\#define {\bfseries M\+A\+T\+C\+H\+\_\+\+S\+U\+C\+C\+E\+SS}~0\hypertarget{shell_8c_a5f48dcc6eee4e04499a8b2a5e8f56b91}{}\label{shell_8c_a5f48dcc6eee4e04499a8b2a5e8f56b91}
+
+\item 
+\#define {\bfseries F\+I\+L\+E\+\_\+\+S\+I\+ZE}~40960\hypertarget{shell_8c_af3c3df6c9906ede8f09fa2af74cb28d5}{}\label{shell_8c_af3c3df6c9906ede8f09fa2af74cb28d5}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries remove\+\_\+file\+\_\+verbose} (char $\ast$)\hypertarget{shell_8c_a3a968be446f0e323bb03169935af55e7}{}\label{shell_8c_a3a968be446f0e323bb03169935af55e7}
+
+\item 
+void {\bfseries remove\+\_\+file} (char $\ast$)\hypertarget{shell_8c_ab7fadac0c9f8aa3dc91be6424599fae7}{}\label{shell_8c_ab7fadac0c9f8aa3dc91be6424599fae7}
+
+\item 
+bool {\bfseries rename\+\_\+file} (char $\ast$, char $\ast$)\hypertarget{shell_8c_a51ee302d9948b78206f91696fde08de9}{}\label{shell_8c_a51ee302d9948b78206f91696fde08de9}
+
+\item 
+int \hyperlink{shell_8c_a9f962247d6fee21d014cf0c334c6f99a}{shell} ()
+\item 
+void {\bfseries print\+\_\+rm\+\_\+help\+\_\+info} ()\hypertarget{shell_8c_a10501db4b9cca7d06b0c9272812732f5}{}\label{shell_8c_a10501db4b9cca7d06b0c9272812732f5}
+
+\item 
+void {\bfseries printf\+\_\+rm\+\_\+version\+\_\+info} ()\hypertarget{shell_8c_af47a51b5cf78dc987bf4bb189ac35ef9}{}\label{shell_8c_af47a51b5cf78dc987bf4bb189ac35ef9}
+
+\item 
+void {\bfseries printf\+\_\+mv\+\_\+help\+\_\+info} ()\hypertarget{shell_8c_adf163c66ec2d99650927b62c6d5d6101}{}\label{shell_8c_adf163c66ec2d99650927b62c6d5d6101}
+
+\item 
+void {\bfseries print\+\_\+mv\+\_\+version\+\_\+info} ()\hypertarget{shell_8c_aa9981a3f0fb531192f9344becbbdfbf5}{}\label{shell_8c_aa9981a3f0fb531192f9344becbbdfbf5}
+
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char {\bfseries username} \mbox{[}$\,$\mbox{]} = \char`\"{}Ivan Valette\char`\"{}\hypertarget{shell_8c_aeb925e5210b37c37e0f03bafe4993550}{}\label{shell_8c_aeb925e5210b37c37e0f03bafe4993550}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementacion de un shell para Pintos. 
+
+\begin{DoxyAuthor}{Author}
+Ivan Valette 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\index{shell.\+c@{shell.\+c}!shell@{shell}}
+\index{shell@{shell}!shell.\+c@{shell.\+c}}
+\subsubsection[{\texorpdfstring{shell()}{shell()}}]{\setlength{\rightskip}{0pt plus 5cm}int shell (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{shell_8c_a9f962247d6fee21d014cf0c334c6f99a}{}\label{shell_8c_a9f962247d6fee21d014cf0c334c6f99a}
+Shell para Pintos capaz de reconocer los comandos whoami\+: imprime el nombre del usuario en consola exit\+: concluye el shell y permite que Pintos termine
+
+En caso de que se teclee un comando diferente a los descritos anteriormente se informara al usuario que el comando es desconocido. 

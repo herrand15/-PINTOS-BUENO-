@@ -1,0 +1,5 @@
+<map id="desc" name="desc">
+<area shape="rect" id="node2" href="$structlock.html" title="lock" alt="" coords="75,95,121,121"/>
+<area shape="rect" id="node3" href="$structsemaphore.html" title="semaphore" alt="" coords="5,5,92,32"/>
+<area shape="rect" id="node4" href="$structthread.html" title="thread" alt="" coords="119,5,178,32"/>
+</map>
